@@ -1,26 +1,23 @@
-from collections import deque
-
 N = int(input())
-crane_1 = list(map(int, input().split()))
-load = int(input())
-baggage_1 = list(map(int, input().split()))
+cranes = list(map(int, input().split()))
+M = int(input())
+boxes = list(map(int, input().split()))
 
-def solution(crane, baggage):
-    bag = deque(baggage)
-    cnt = 0
+cranes.sort(reverse=True)
+boxes.sort(reverse=True)
 
-    while bag:
-        crane_sum = 0
-        cra = deque(crane)
+cnt = 0
 
-        while cra and bag:
-            if (cra[0] + crane_sum) < bag[0]:
-                crane_sum += cra.popleft()
-            else:
-                bag.popleft()
-                crane_sum = 0
-        cnt += 1
-
-    return cnt
-
-print(solution(crane_1, baggage_1))
+if boxes[0] > cranes[0]: cnt = -1
+else:
+    while boxes:
+        for c in cranes:
+            if boxes and c < boxes[-1]:
+                continue
+            for b in boxes:
+                if c >= b:
+                    boxes.remove(b)
+                    break
+        cnt+=1
+        
+print(cnt)
