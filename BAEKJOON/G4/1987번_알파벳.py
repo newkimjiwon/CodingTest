@@ -1,5 +1,3 @@
-from collections import deque
-
 R, C = map(int, input().split())
 
 board = []
@@ -8,26 +6,20 @@ for _ in range(R):
     line = list(input())
     board.append(line)
 
-def bfs(board):
-    q = deque([(0, 0)])
-    s = set()
-    s.add(board[0][0])
-
+def dfs(board, y, x, visited):
     move = [(0, 1), (0, -1), (1, 0), (-1, 0)]
-    steps = 0
+    max_steps = 0
 
-    while q:
-        y, x = q.popleft()
+    for iy, ix in move:
+        ny = y + iy
+        nx = x + ix
+        if 0 <= ny < len(board) and 0 <= nx < len(board[0]) and board[ny][nx] not in visited:
+            visited.add(board[ny][nx])
+            max_steps = max(max_steps, dfs(board, ny, nx, visited))
+            visited.remove(board[ny][nx])
 
-        for iy, ix in move:
-            ny = iy + y
-            nx = ix + x
-            if 0 <= ny < len(board) and 0 <= nx < len(board[0]) and board[ny][nx] not in s:
-                q.append((ny, nx))
-                s.add(board[ny][nx])
+    return max_steps + 1
 
-        steps += 1
-
-    return steps
-
-print(bfs(board))
+visited = set()
+visited.add(board[0][0])
+print(dfs(board, 0, 0, visited))
