@@ -2,7 +2,6 @@ from collections import deque
 
 visit = [False] * 9
 
-
 def bfs(graph, start, visit):
     queue = deque([start])
 
