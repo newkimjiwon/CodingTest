@@ -1,12 +1,14 @@
 import sys
+
 input = sys.stdin.readline
+
 sys.setrecursionlimit(350000)
 def inrange(r, c, R, C):
     if 0 <= r < R and 0 <= c < C:
         return True
     return False
 
-def dfs(r,c,R,C):
+def dfs(r, c, R, C):
     global ans
     check[r][c] = 2    # 방문 체크를 해두기, 일단 불가능 한 것으로 기록
     v = maze[r][c]
@@ -33,7 +35,9 @@ def dfs(r,c,R,C):
     return False    # 탈출 불가
 
 N, M = map(int,input().split())
+
 maze = [input().rstrip() for _ in range(N)]
+
 direction = {'U': (-1, 0), 'D': (1, 0), 'R': (0, 1), 'L': (0, -1)}
 check = [[0] * M for _ in range(N)]    # 좌표 방문 여부를 기록 // 값 - 0 : 미방문, 1 : 탈출가능, 2 : 탈출 불가
 
@@ -41,9 +45,10 @@ for r in range(N):
     for c in range(M):
         if not check[r][c]:
             dfs(r, c, N, M)
-ans = 0
+
+answer = 0
 for r in range(N):
     for c in range(M):
         if check[r][c] == 1:
-            ans += 1
-print(ans)
+            answer += 1
+print(answer)
