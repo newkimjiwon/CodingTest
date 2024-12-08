@@ -1,3 +1,4 @@
+# main 함수
 def main():
     n = int(input())
 
