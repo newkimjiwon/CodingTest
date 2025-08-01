@@ -27,8 +27,6 @@ def solution(n, arr):
 
 
 if __name__=="__main__":
-    # n = int(input())
-    # arr = list(map(int, input().split()))
-    # solution(n, arr)
-
-    solution(5, [-10, -3, 2, 4, 8])
+    n = int(input())
+    arr = list(map(int, input().split()))
+    solution(n, arr)
