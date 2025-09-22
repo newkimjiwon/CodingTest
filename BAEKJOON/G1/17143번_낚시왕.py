@@ -1,115 +1,80 @@
-import sys
-input = sys.stdin.readline
-
 # d: 1=위, 2=아래, 3=오른쪽, 4=왼쪽
+dy = [0, -1, 1, 0, 0]
+dx = [0,  0, 0, 1,-1]
 
-def move_axis(pos, s, dir_sign, limit):
-    """
-    1D 반사 이동을 O(1)로 계산
-    pos: 1..limit
-    s: 이동 칸 수(축 주기로 이미 축소해둘 것)
-    dir_sign: +1(아래/오른쪽), -1(위/왼쪽)
-    limit: 축 길이 (R 또는 C)
-    return: (새 위치, '다음 턴'에 사용할 방향 부호)
-    """
-    if limit == 1 or s == 0:
-        return pos, dir_sign
 
-    L = limit - 1
-    period = 2 * L
+def reverse_dir(d):  # 방향 전환
+    return 2 if d == 1 else 1 if d == 2 else 4 if d == 3 else 3
 
-    # 0..L의 좌표계를 정방향(+1) 기준으로 변환
-    x0 = pos - 1
-    start = x0 if dir_sign == +1 else (2 * L - x0) % period
 
-    x = (start + s) % period
+def move_shark(fishing, R, C):
+    # fishing[r][c]는 "상어들의 리스트" 각 상어는 [z, s, d] 정보를 갖는다.
+    g = [[[] for _ in range(C + 1)] for _ in range(R + 1)]
 
-    if x <= L:
-        # 증가 구간
-        new_pos = 1 + x
-        # 벽(x==L)에 정확히 도달하면 다음 턴은 반대(-1)
-        new_dir = +1 if x < L else -1
-    else:
-        # 감소 구간
-        x2 = 2 * L - x
-        new_pos = 1 + x2
-        new_dir = -1
-    return new_pos, new_dir
+    for rr in range(1, R + 1):
+        for cc in range(1, C + 1):
+            if not fishing[rr][cc]:
+                continue
+            
+            # 이 칸의 모든 상어 이동
+            for z, s, d in fishing[rr][cc]:
+                y, x = rr, cc
 
-def solve():
-    R, C, M = map(int, input().split())
-    grid = [[0] * (C + 1) for _ in range(R + 1)]  # 1-based
-    sharks = [None] * (M + 1)                     # [r, c, s, d, z]
-    alive  = [False] * (M + 1)
+                # 속도 주기 축소
+                if d == 1 or d == 2:   # 세로
+                    steps = (s % (2 * (R - 1))) if R > 1 else 0
+                else:                  # 가로
+                    steps = (s % (2 * (C - 1))) if C > 1 else 0
 
-    for i in range(1, M + 1):
+                while steps:
+                    ny, nx = y + dy[d], x + dx[d]
+                    # 다음 칸이 범위를 벗어나면 방향만 바꾸고 재시도
+                    if not (1 <= ny <= R and 1 <= nx <= C):
+                        d = reverse_dir(d)
+                        continue
+                    y, x = ny, nx
+                    steps -= 1
+
+                g[y][x].append([z, s, d])
+
+    return g  # 새로운 상어 배열을 반환
+
+
+if __name__=="__main__":
+    R, C, M = map(int, input().split())  # 격자판의 크기 R, C와 상어의 수 M이 주어진다. (2 ≤ R, C ≤ 100, 0 ≤ M ≤ R×C)
+
+    fishing = [[[] for _ in range(C + 1)] for _ in range(R + 1)]  # 상어
+    
+    for _ in range(M):
+        # 상어의 위치, z는 크기, s는 속력, d는 이동 방향이다
         r, c, s, d, z = map(int, input().split())
-        sharks[i] = [r, c, s, d, z]
-        alive[i]  = True
-        grid[r][c] = i
+        fishing[r][c].append([z, s, d])  # 상어 정보를 배열에 넣는다
 
-    # 축 주기로 속도 축소 (세로: 2*(R-1), 가로: 2*(C-1))
-    for i in range(1, M + 1):
-        if not alive[i]:
-            continue
-        r, c, s, d, z = sharks[i]
-        if d in (1, 2):
-            sharks[i][2] = s % ((R - 1) * 2) if R > 1 else 0
-        else:
-            sharks[i][2] = s % ((C - 1) * 2) if C > 1 else 0
+    # 잡은 양
+    eat_count = 0
 
-    ans = 0
-    # 낚시왕이 열 1..C로 이동
+    # 시뮬레이션 시작
     for col in range(1, C + 1):
-        # 1) 포획: 해당 열에서 가장 위(r가 작은) 상어
+        # 1) 이 열에서 가장 위(r가 작은) 상어를 잡는다
         for row in range(1, R + 1):
-            sid = grid[row][col]
-            if sid and alive[sid]:
-                ans += sharks[sid][4]  # z
-                alive[sid] = False
-                grid[row][col] = 0
+            if fishing[row][col]:
+                z, s, d = fishing[row][col][0]
+                eat_count += z
+                fishing[row][col] = []
                 break
 
-        # 2) 상어 이동 후 충돌 처리
-        new_grid = [[0] * (C + 1) for _ in range(R + 1)]
-        for sid in range(1, M + 1):
-            if not alive[sid]:
-                continue
-            r, c, s, d, z = sharks[sid]
+        # 2. 상어를 움직인다
+        fishing = move_shark(fishing, R, C)
 
-            if d == 1:      # 위
-                nr, sign = move_axis(r, s, -1, R)
-                nc = c
-                nd = 1 if sign == -1 else 2
-            elif d == 2:    # 아래
-                nr, sign = move_axis(r, s, +1, R)
-                nc = c
-                nd = 1 if sign == -1 else 2
-            elif d == 3:    # 오른쪽
-                nc, sign = move_axis(c, s, +1, C)
-                nr = r
-                nd = 4 if sign == -1 else 3
-            else:           # 왼쪽
-                nc, sign = move_axis(c, s, -1, C)
-                nr = r
-                nd = 4 if sign == -1 else 3
-
-            other = new_grid[nr][nc]
-            if other == 0:
-                new_grid[nr][nc] = sid
-                sharks[sid] = [nr, nc, s, nd, z]
-            else:
-                # 큰 상어만 생존
-                if sharks[other][4] < z:
-                    alive[other] = False
-                    new_grid[nr][nc] = sid
-                    sharks[sid] = [nr, nc, s, nd, z]
-                else:
-                    alive[sid] = False
-
-        grid = new_grid
-
-    print(ans)
-
-if __name__ == "__main__":
-    solve()
+        # 3. 같은 배열에 상어가 있는 경우 잡아 먹는다.
+        for r in range(1, R + 1):
+            for c in range(1, C + 1):
+                # 상어가 있을 때
+                if fishing[r][c]:
+                    # 내림차순으로 size(Z)가 가장 큰 상어를 살린다.
+                    if len(fishing[r][c]) >= 2:
+                        # 크기 z 기준 내림차순 정렬 후 하나만 남김
+                        fishing[r][c].sort(key=lambda t: t[0], reverse=True)
+                        fishing[r][c] = [fishing[r][c][0]]
+    
+    print(eat_count)
