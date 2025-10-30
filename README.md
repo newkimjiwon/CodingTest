@@ -1,81 +1,47 @@
-# CodingTest Repository
+# BACKJOON (알고리즘 문제 풀이)
 
-이 저장소는 **코딩 테스트 문제 풀이 기록**, **핵심 알고리즘 정리**, **자료구조 템플릿 구성** 등을 통해 개발자의 문제 해결 능력을 체계적으로 향상시키기 위한 공간입니다.  
-**프로그래머스(Programmers)**, **백준(BOJ)**, **solve.ac** 등 다양한 플랫폼의 문제를 다루며, 실제 기업 코딩 테스트를 대비한 실전 문제풀이에 중점을 둡니다.
+### Bronze (브론즈) 단계
 
-## 저장소 구성 목적
+<details>
+<summary> Bronze 단계 문제 풀이 목록 </summary>
 
-- 코딩 테스트에 자주 등장하는 **알고리즘 및 문제 유형** 정리
-- 문제 풀이 후 **리팩토링** 및 **복습 자료**로 재활용
-- **난이도 및 유형별 분류**를 통한 체계적 학습
-- **기초 → 응용 → 실전** 단계별 문제 풀이 흐름 구성
+* **1000. A+B**: (YYYY.MM.DD, Python)
+* **10871. X보다 작은 수**: (YYYY.MM.DD, Java)
+* **2739. 구구단**: (YYYY.MM.DD, C++)
+* **(추가)**: (날짜, 언어)
 
-## 문제 분류 기준
+</details>
 
-### Programmers  
-- **레벨 기반 폴더 구조**
-- 디렉토리명은 `lv{난이도}_{문제이름}` 형식으로 작성
-- 예시:
-    ```
-    programmers/
-    ├── lv1_소수찾기/
-    │   └── solution.py
-    ├── lv2_타겟넘버/
-    │   └── solution.py
-    └── lv3_네트워크/
-        └── solution.py
-    ```
+### Silver (실버) 단계
 
-### Baekjoon (BOJ) + [solve.ac](https://solved.ac)
-- **문제 번호 + 제목 기반 구조**
-- 예시:
-    ```
-    baekjoon/
-    ├── 1000번_A+B/
-    ├── 1920번_수찾기/
-    └── 2178번_미로탐색/
-    ```
+<details>
+<summary> Silver 단계 문제 풀이 목록 </summary>
 
-- **solve.ac 난이도 기준 티어 분류**
-    | Tier | Symbol | 난이도 순서 |
-    |------|--------|--------------|
-    | Bronze | B | B5 → B1 |
-    | Silver | S | S5 → S1 |
-    | Gold | G | G5 → G1 |
-    | Platinum | P | P5 → P1 |
-    | Diamond | D | D5 → D1 |
-    | Ruby | R | R5 → R1 |
+* **1920. 수 찾기**: (YYYY.MM.DD, Python)
+* **1012. 유기농 배추**: (YYYY.MM.DD, Java)
+* **11047. 동전 0**: (YYYY.MM.DD, Python)
+* **(추가)**: (날짜, 언어)
 
-## 포함 자료
+</details>
 
-- **자료구조별 템플릿 코드**
-  - 스택, 큐, 덱, 트리, 힙, 해시, 유니온 파인드 등
-- **알고리즘 정리 파일**
-  - 정렬, 이분 탐색, DFS/BFS, 다이나믹 프로그래밍, 그리디, 투포인터, 백트래킹, 그래프 탐색 등 핵심 주제
-- **시간복잡도 기준 정리표**
-  - O(1), O(logN), O(NlogN), O(N²) 별로 풀 수 있는 입력 범위 가이드
-- **실패한 문제, 개선이 필요한 풀이에 대한 회고 및 분석 정리**
+### Gold (골드) 단계
 
-## 활용 전략
+<details>
+<summary> Gold 단계 문제 풀이 목록 </summary>
 
-- 매일 최소 1문제 풀이 및 커밋
-- 풀이한 문제는 **주석으로 로직 설명 필수**
-- 유사 유형 문제를 분류하여 재도전 시 참고
-- 실패한 문제는 `FAILED/` 디렉토리에서 별도 관리 가능
+* **7576. 토마토**: (YYYY.MM.DD, C++)
+* **1753. 최단경로**: (YYYY.MM.DD, Java)
+* **(추가)**: (날짜, 언어)
 
-## 향후 추가 예정
+</details>
 
-- **기업별 기출 문제 폴더** (예: Kakao, Naver, Toss 등)
-- **Python / C++ / Kotlin 공통 템플릿**
-- **문제별 입출력 예시 자동 테스트 코드**
-- **백준 단계별 문제 정리 로드맵**
+### Platinum (플래티넘) 단계
 
-## 🧩 참고 사이트
+<details>
+<summary> Platinum 단계 문제 풀이 목록 </summary>
 
-- [프로그래머스](https://programmers.co.kr/)
-- [백준 온라인 저지](https://www.acmicpc.net/)
-- [solve.ac](https://solved.ac/)
-- [블로그](https://newkimjiwon.tistory.com/)
+* **(문제 번호). 문제 이름**: (YYYY.MM.DD, 언어)
+* **(문제 번호). 문제 이름**: (YYYY.MM.DD, 언어)
+* **(추가)**: (날짜, 언어)
 
-
-> 꾸준한 기록은 실력입니다.  
+</details>
