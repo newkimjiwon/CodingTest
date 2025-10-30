@@ -1,6 +1,6 @@
 # BACKJOON (알고리즘 문제 풀이)
 
-<details>
+<details open>
 <summary> 구현 문제 목록 </summary>
 
 * **[1759번 암호 만들기](https://www.acmicpc.net/problem/1759)** (Gold)
@@ -10,7 +10,7 @@
 
 </details>
 
-<details>
+<details open>
 <summary> 동적 계획법 (DP) 문제 목록 </summary>
 
 * **[1081번 합](https://www.acmicpc.net/problem/1081)** (Gold)
@@ -20,7 +20,7 @@
 
 </details>
 
-<details>
+<details open>
 <summary> 그래프 이론 & 탐색 문제 목록 </summary>
 
 * **[1504번 특정한 최단 경로](https://www.acmicpc.net/problem/1504)** (Gold)
@@ -30,7 +30,7 @@
 
 </details>
 
-<details>
+<details open>
 <summary> 시뮬레이션 문제 목록 </summary>
 
 * **[13460번 구슬 탈출 2](https://www.acmicpc.net/problem/13460)** (Gold)
@@ -39,7 +39,7 @@
 * **[3025번 돌 던지기](https://www.acmicpc.net/problem/3025)** (Platinum)
 * **[1019번 책 페이지](https://www.acmicpc.net/problem/1019)** (Platinum)
 
-</details>
+</details open>
 
 <details>
 <summary> 자료구조 (스택, 큐, 트리 등) 문제 목록 </summary>
@@ -49,7 +49,7 @@
 
 </details>
 
-<details>
+<details open>
 <summary> 이분 탐색 </summary>
 
 * **[1484번 다이어트](https://www.acmicpc.net/problem/1484)** (Gold)
