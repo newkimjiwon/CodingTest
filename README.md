@@ -41,7 +41,7 @@
 
 </details open>
 
-<details>
+<details open>
 <summary> 자료구조 (스택, 큐, 트리 등) 문제 목록 </summary>
 
 * **[3015번 오아시스 재결합](https://www.acmicpc.net/problem/3015)** (Platinum) - 스택
