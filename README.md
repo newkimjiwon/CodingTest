@@ -16,6 +16,7 @@
 * **[1081번 합](https://www.acmicpc.net/problem/1081)** (Gold)
 * **[1202번 보석 도둑](https://www.acmicpc.net/problem/1202)** (Gold)
 * **[2133번 타일 채우기](https://www.acmicpc.net/problem/2133)** (Gold)
+* **[1082번 방 번호](https://www.acmicpc.net/problem/1082)** (Gold)
 * **[2618번 경찰차](https://www.acmicpc.net/problem/2618)** (Platinum)
 
 </details>
