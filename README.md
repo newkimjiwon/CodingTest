@@ -13,6 +13,7 @@
 <details open>
 <summary> 동적 계획법 (DP) 문제 목록 </summary>
 
+* **[2491번 수열](https://www.acmicpc.net/problem/2491)** (Silver)
 * **[1081번 합](https://www.acmicpc.net/problem/1081)** (Gold)
 * **[1202번 보석 도둑](https://www.acmicpc.net/problem/1202)** (Gold)
 * **[2133번 타일 채우기](https://www.acmicpc.net/problem/2133)** (Gold)
@@ -55,5 +56,12 @@
 <summary> 이분 탐색 </summary>
 
 * **[1484번 다이어트](https://www.acmicpc.net/problem/1484)** (Gold)
+
+</details>
+
+<details open>
+<summary> 브루트포스 알고리즘 </summary>
+
+* **[1059번 좋은 구간](https://www.acmicpc.net/problem/1059)** (Silver)
 
 </details>
