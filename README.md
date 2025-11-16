@@ -26,6 +26,7 @@
 <details open>
 <summary> 그래프 이론 & 탐색 문제 목록 </summary>
 
+* **[1766번 문제집](https://www.acmicpc.net/problem/1766)** (Gold) - 위상 정렬
 * **[1967번 트리의 지름](https://www.acmicpc.net/problem/1967)** (Gold) - 트리
 * **[1504번 특정한 최단 경로](https://www.acmicpc.net/problem/1504)** (Gold)
 * **[11779번 최소비용 구하기 2](https://www.acmicpc.net/problem/11779)** (Gold)
