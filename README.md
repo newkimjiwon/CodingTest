@@ -1,4 +1,4 @@
-# BACKJOON (알고리즘 문제 풀이)
+# 알고리즘 문제 풀이
 
 <details open>
 <summary> 구현 문제 목록 </summary>
@@ -65,6 +65,7 @@
 <details open>
 <summary> 브루트포스 알고리즘 </summary>
 
+* **[LV.0 안전지대](https://school.programmers.co.kr/learn/courses/30/lessons/120866)**
 * **[1059번 좋은 구간](https://www.acmicpc.net/problem/1059)** (Silver)
 
 </details>
