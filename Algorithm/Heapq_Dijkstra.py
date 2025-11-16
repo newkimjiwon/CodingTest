@@ -15,12 +15,13 @@ d = [INF] * 9
 
 def dijkstra(start):
     d[start] = 0
-    heap = []
-    heapq.heappush(heap, (0, start))  # 거리, 노드
+    pq = []
+    heapq.heappush(pq, (0, start))  # (distance, node)
 
-    while heap:
-        distance, current = heapq.heappop(heap)
+    while pq:
+        distance, current = heapq.heappop(pq)
 
+        # 이미 더 짧은 경로가 존재하면 무시
         if d[current] < distance:
             continue
 
@@ -28,6 +29,9 @@ def dijkstra(start):
             nextDistance = distance + weight
             if nextDistance < d[nxt]:
                 d[nxt] = nextDistance
-                heapq.heappush(heap, (nextDistance, nxt))
+                heapq.heappush(pq, (nextDistance, nxt))
 
 dijkstra(1)
+
+for i in range(1, 9):
+    print(d[i], end=' ')
