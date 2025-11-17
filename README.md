@@ -3,6 +3,7 @@
 <details open>
 <summary> 구현 문제 목록 </summary>
 
+* **[2231번 분해합](https://www.acmicpc.net/problem/2231)** (Bronze)
 * **[2578번 빙고](https://www.acmicpc.net/problem/2578)** (Silver)
 * **[1759번 암호 만들기](https://www.acmicpc.net/problem/1759)** (Gold)
 * **[1263번 시간 관리](https://www.acmicpc.net/problem/1263)** (Gold)
