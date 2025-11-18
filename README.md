@@ -3,6 +3,7 @@
 <details open>
 <summary> 구현 문제 목록 </summary>
 
+* **[2581번 소수](https://www.acmicpc.net/problem/2581)** (Bronze) - 소수 구하기 알고리즘
 * **[2231번 분해합](https://www.acmicpc.net/problem/2231)** (Bronze)
 * **[2578번 빙고](https://www.acmicpc.net/problem/2578)** (Silver)
 * **[1759번 암호 만들기](https://www.acmicpc.net/problem/1759)** (Gold)
