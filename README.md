@@ -41,9 +41,10 @@
 <details open>
 <summary> 시뮬레이션 문제 목록 </summary>
 
-* **[13460번 구슬 탈출 2](https://www.acmicpc.net/problem/13460)** (Gold)
-* **[17143번 낚시](https://www.acmicpc.net/problem/17143)** (Gold)
-* **[17472번 다리 만들기 2](https://www.acmicpc.net/problem/17472)** (Gold)
+* **[3190번 뱀](https://www.acmicpc.net/problem/3190)** (Gold) - 삼성SW
+* **[13460번 구슬 탈출 2](https://www.acmicpc.net/problem/13460)** (Gold) - 삼성SW
+* **[17143번 낚시](https://www.acmicpc.net/problem/17143)** (Gold) - 삼성SW
+* **[17472번 다리 만들기 2](https://www.acmicpc.net/problem/17472)** (Gold) - 삼성SW
 * **[3025번 돌 던지기](https://www.acmicpc.net/problem/3025)** (Platinum)
 * **[1019번 책 페이지](https://www.acmicpc.net/problem/1019)** (Platinum)
 
