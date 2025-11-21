@@ -41,6 +41,7 @@
 <details open>
 <summary> 시뮬레이션 문제 목록 </summary>
 
+* **[10813번 공 바꾸기](https://www.acmicpc.net/problem/10813)** (Bronze)
 * **[3190번 뱀](https://www.acmicpc.net/problem/3190)** (Gold) - 삼성SW
 * **[13460번 구슬 탈출 2](https://www.acmicpc.net/problem/13460)** (Gold) - 삼성SW
 * **[17143번 낚시](https://www.acmicpc.net/problem/17143)** (Gold) - 삼성SW
