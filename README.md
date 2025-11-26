@@ -18,6 +18,7 @@
 
 * **[2491번 수열](https://www.acmicpc.net/problem/2491)** (Silver)
 * **[1081번 합](https://www.acmicpc.net/problem/1081)** (Gold)
+* **[1947번 선물 전달](https://www.acmicpc.net/problem/1947)** (Gold)
 * **[1202번 보석 도둑](https://www.acmicpc.net/problem/1202)** (Gold)
 * **[2133번 타일 채우기](https://www.acmicpc.net/problem/2133)** (Gold)
 * **[1082번 방 번호](https://www.acmicpc.net/problem/1082)** (Gold)
