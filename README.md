@@ -65,6 +65,7 @@
 <details open>
 <summary> 이분 탐색 </summary>
 
+* **[17609번 회문](https://www.acmicpc.net/problem/17609)** (Gold)
 * **[1484번 다이어트](https://www.acmicpc.net/problem/1484)** (Gold)
 
 </details>
