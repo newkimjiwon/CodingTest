@@ -56,6 +56,7 @@
 <details open>
 <summary> 자료구조 (스택, 큐, 트리 등) 문제 목록 </summary>
 
+* **[13710번 XOR 합 3](https://www.acmicpc.net/problem/13710)** (Gold) - XOR 합
 * **[2263번 트리의 순회](https://www.acmicpc.net/problem/2263)** (Gold) - 트리
 * **[3015번 오아시스 재결합](https://www.acmicpc.net/problem/3015)** (Platinum) - 스택
 * **[16566번 카드 게임](https://www.acmicpc.net/problem/16566)** (Platinum) - 분리 집합
