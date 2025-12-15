@@ -29,6 +29,7 @@
 <details open>
 <summary> 그래프 이론 & 탐색 문제 목록 </summary>
 
+* **[1261번 알고스팟](https://www.acmicpc.net/problem/1261)** (Gold) - 그래프
 * **[2589번 보물섬](https://www.acmicpc.net/problem/2589)** (Gold) - 그래프
 * **[13913번 숨바꼭질 4](https://www.acmicpc.net/problem/13913)** (Gold) - 역추적
 * **[4485번 녹색 옷 입은 애가 젤다지?](https://www.acmicpc.net/problem/4485)** (Gold) 다익스트라 + 격자 그래프
