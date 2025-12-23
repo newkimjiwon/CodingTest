@@ -6,6 +6,7 @@
 * **[2581번 소수](https://www.acmicpc.net/problem/2581)** (Bronze) - 소수 구하기 알고리즘
 * **[2231번 분해합](https://www.acmicpc.net/problem/2231)** (Bronze)
 * **[2578번 빙고](https://www.acmicpc.net/problem/2578)** (Silver)
+* **[18111번 마인크래프트](https://www.acmicpc.net/problem/18111)** (Silver)
 * **[1759번 암호 만들기](https://www.acmicpc.net/problem/1759)** (Gold)
 * **[1263번 시간 관리](https://www.acmicpc.net/problem/1263)** (Gold)
 * **[1174번 줄어드는 수](https://www.acmicpc.net/problem/1174)** (Gold)
